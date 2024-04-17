@@ -8,7 +8,6 @@
         <meta name="keywords" content="Café, receita e reserva">
         <title>Coffee time</title>
         <link rel="icon" href="favicon.ico" type="image/ico">
-        <link rel="stylesheet" href="./vendor/normalize.css">
         <link rel="stylesheet" href="./pages/index.css">
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -40,7 +39,7 @@
                         <a class="nav__link" href="#reservation">Reservar uma mesa</a>
                     </li>
                     <li>
-                        <a class="nav__link" href="#">Contatos</a>
+                        <a class="nav__link" href="#footer">Contatos</a>
                     </li>
                     </ul>
                 </nav>
@@ -55,11 +54,11 @@
                     Esta é nossa zona de estudo! Temos aquele cafezinho para energizar
                     você e vibrações aconchegantes para soltar a criatividade.           
                     </p>
-
+                    
                     <img
                     src="./images/inside_coffee_shop.png"
                     alt="imagem da cafeteria Triple Peaks"
-                    class="header__image">
+                    class="header__image"> 
                         
                     <div class="header__footer">
                         <div>    
@@ -67,13 +66,12 @@
                             <p class="header__paragraph">Segunda a sexta (10:00 - 19:00)</p>
                             <p class="header__paragraph">Sábado a domingo (11:00 - 18:00)</p>
                         </div>
-                        <div>
+                        <div class="header__address">
                             <p class="header__paragraph">200 Success Avenue, a cidade de Triple Peaks</p>  
                         </div>
                     </div>         
-            </header> 
-                            
-            <main class="content">
+            </header>                        
+                <main class="content">
                     <section class="recipes" id="recipes">
                         <h2 class="recipes__title">Receitas</h2>
                         <h3 class="recipes__subtitle">Confira algumas Receitas que coletamos para seu lanchinho caseiro:</h3>    
@@ -113,13 +111,110 @@
                         </div> 
                         <!--fechamento do recipes--> 
                     </section>
-
+                            <!---Parte 3-->
                     <section class="reservation" id="reservation">
-                        <!--formulario 2a seção-->
+                        <h2 class="reservation__title">Reservar uma mesa</h2>
+                        <form class=" form reservation__form">
+                            <fieldset class="form reservation__form-item">
+                                <label 
+                                for="name" 
+                                class="reservation__form reservation__form-label">Nome*</label>    
+                                    
+                                <input 
+                                    type="text"
+                                    class="reservation__form reservation__form-input"
+                                    id="name"
+                                    name="name"
+                                    placeholder="Nome"
+                                    required>
+                                    
+                                <label
+                                    for="invite_number"
+                                    class="reservation__form reservation__form-label">Número de convidados*</label>           
+
+                                <input
+                                    type="number"        
+                                    class="reservation__form reservation__form-input"
+                                    id="invite_number"
+                                    name="invite_number"
+                                    placeholder="1 - 8"
+                                    min="1"
+                                    max="8"
+                                    required>
+
+                                <label
+                                    for="date-hour"
+                                    class="reservation__form reservation__form-label">Data e Hora*</label>
+
+                                    <input
+                                    type="date"
+                                    class="reservation__form reservation__form-input"
+                                    id="date-hour"
+                                    name="date-hour"
+                                    required>
+
+                                <label
+                                     for="mail"
+                                     class="reservation__form reservation__form-label">Seu e-mail*</label>
+
+                                <input
+                                    type="email"
+                                    class="reservation__form reservation__form-input"
+                                    id="mail"
+                                    name="mail"
+                                    placeholder="email@email.com"
+                                    required>
+
+                                <button
+                                    type="submit"
+                                    class="reservation__form reservation__form-button">Reservar uma mesa</button>
+
+                                    <label
+                                        for="bold-heading"
+                                        class="reservation__label reservation__label_check">
+                                    <input
+                                    type="checkbox"
+                                    name="extra-option"
+                                    id="bold-heading"
+                                    class="reservation__item reservation__item_check-align"
+                                    value="bold-heading">Eu concordo com os termos de uso</label>
+                            </fieldset>
+                        </form>
                     </section>
                     <!--formulario 2a seção-->
-            </main>
-            <footer class="footer"></footer>
+                </main> 
+            <footer class="footer" id="footer">
+                <div class="footer__content">
+                  <div>
+                    <img 
+                    src="./images/logo_coffeeshop_light.svg"
+                    alt="Logotipo da Triple Espresso"
+                    class="footer__logo">
+                  </div>
+                  <div class="footer__circle"></div>      
+                  <div class=" footer__content footer__social">
+                        <h4 class="footer__social-heading">Mídia Social</h4>
+                        <ul class="footer__list">
+                            <li class="footer__list-item">
+                            <a href="#" class="footer__social-link">
+                            <img 
+                            src="./images/facebook_white.svg" 
+                            alt="Icone-Facebook" 
+                            class="footer__social-icon">Facebook</a>
+                            </li>
+                            
+                            <li class="footer__list-item">
+                            <a href="#" class="footer__social-link">
+                            <img 
+                            src="./images/instagram_white.svg" 
+                            alt="Icone-Instagram" 
+                            class="footer__social-icon">Instagram</a>
+                            </li>
+                        </ul>
+                  </div>
+                </div>       
+                <p class="footer__copyright">&copy; 2024 Daniela Rocha</p> 
+            </footer>    
         </div>
         <!--fechamento div page-->
     </body>
